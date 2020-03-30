@@ -11,7 +11,7 @@ Covid-19 data is a website with all the information about the pandemic disease C
 
 if u want to upgrade this website, translate or whatever, just git clone it! Thank you and goodbye
 
-# v2.0.0
+## v2.0.0
 
 Updates on front-end and back-end & organization
 

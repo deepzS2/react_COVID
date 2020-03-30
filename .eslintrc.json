@@ -19,11 +19,17 @@
   },
   "plugins": ["react"],
   "rules": {
-    "quotes": [2, "backtick", { "avoidEscape": true }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "linebreak-style": ["warn", "unix"],
+    "quotes": [2, "backtick", {
+      "avoidEscape": true
+    }],
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
     "implicit-arrow-linebreak": "off",
     "comma-dangle": "off",
     "indent": "off",
-    "no-trailing-spaces": "off"
+    "no-trailing-spaces": "off",
+    "react/forbid-prop-types": "off"
   }
 }
