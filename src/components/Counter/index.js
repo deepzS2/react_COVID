@@ -1,39 +1,39 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import React, { useState } from "react";
-import CountUp from 'react-countup';
+import { useCountUp } from 'react-countup';
 import PropTypes from "prop-types";
 import VisibilitySensor from 'react-visibility-sensor';
 
 import Container from "./styles";
 
 export default function Counter({ end, suffix, duration }) {
-  const [active, setActive] = useState(true);
+  const [visibilityActive, setVisibilityActive] = useState(true);
+  const { countUp, start } = useCountUp({
+    start: 0,
+    end,
+    duration,
+  });
 
-  const handleSensor = (isVisible, start) => {
-    if (isVisible) {
-      if (active) {
-        start();
-      }
-
-      setActive(false);
+  const handleSensor = (isVisible, startFunc) => {
+    if (isVisible && visibilityActive) {
+      startFunc();
+      setVisibilityActive(false);
     }
   };
 
   return (
     <Container>
-      <CountUp start={0} end={end} suffix={suffix} duration={duration}>
-        {({ countUpRef, start }) => (
-          <VisibilitySensor
-            onChange={(isVisible) => {
-                handleSensor(isVisible, start);
-              }}
-            active={active}
-            delayedCall
-          >
-            <h2 ref={countUpRef} className={`number ${suffix.trim()}`} />
-          </VisibilitySensor>
-          )}
-      </CountUp>
+      <VisibilitySensor
+        active={visibilityActive}
+        onChange={(isVisible) => {
+          handleSensor(isVisible, start);
+        }}
+        delayedCall
+      >
+        <h2 className={`number ${suffix.trim()}`}>
+          {`${countUp} ${suffix}`}
+        </h2>
+      </VisibilitySensor>
     </Container>
   );
 }
