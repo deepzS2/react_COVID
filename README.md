@@ -1,4 +1,4 @@
-# Covid-19 React [![Netlify Status](https://api.netlify.com/api/v1/badges/32b6ba4e-03e0-4bf8-be02-45943c50ec3a/deploy-status)](https://app.netlify.com/sites/pandemycovid/deploys)
+# Covid-19 React [![Netlify Status](https://api.netlify.com/api/v1/badges/ea54ddb6-5437-4ede-a525-24d692fc46b2/deploy-status)](https://app.netlify.com/sites/pandemycovid/deploys)
 
 A better version from my previous project called [COVID19_express](https://github.com/deepzS2/COVID19_express)
 
