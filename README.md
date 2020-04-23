@@ -6,7 +6,7 @@ and the same README:
 Covid-19 data is a website with all the information about the pandemic disease COVID-19 where it takes those data from the API on this file:
 
 - [api.js](src/services/api.js)
-- [API Documentation] (https://corona.lmao.ninja)
+- [API Documentation](https://corona.lmao.ninja)
 
 if u want to upgrade this website, translate or whatever, just git clone it! Thank you and goodbye
 
