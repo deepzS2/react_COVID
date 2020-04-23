@@ -24,7 +24,7 @@ export default function Home() {
 
   const fetchData = useCallback(async () => {
     let dataCases = await api.get(`all`);
-    let dataRows = await api.get(`countries?sort=country`);
+    let dataRows = await api.get(`countries/?sort=name`);
 
     dataCases = dataCases.data;
     dataRows = dataRows.data.reverse();
